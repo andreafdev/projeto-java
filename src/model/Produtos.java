@@ -5,7 +5,7 @@ public class Produtos {
 	private String nome;
 	private double preco;
 	
-	public Produtos( ) {
+	public Produtos(String nome, double preco) {
 	
     }
 
@@ -28,7 +28,7 @@ public class Produtos {
     @Override
     public String toString() {
         return nome + " - R$" + preco;
-    }
+}
 	
 }
 

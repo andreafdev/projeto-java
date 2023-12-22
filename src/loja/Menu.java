@@ -12,15 +12,17 @@ public static void main(String[] args) {
 	Scanner leia = new Scanner(System.in);
 	Carrinho carrinho = newCarrinho();
 	
-	Produtos produto1 = new Produtos();
-	Produtos produto2 = new Produtos();
-	Produtos produto3 = new Produtos();
+	Produtos produto1 = new Produtos("Caixa Misteriosa - Pacote 1", 75);
+	Produtos produto2 = new Produtos("Caixa Misteriosa - Pacote 2", 110);
+	Produtos produto3 = new Produtos("Caixa Misteriosa - Pacote 3", 200);
+	Produtos produto4 = new Produtos("Caixa Misteriosa - Pacote 4", 225);
+	Produtos produto5 = new Produtos("Caixa Misteriosa - Pacote 5", 250);
 	
 	int opcao;
 
 	while (true) {
 
-		System.out.println(Cores.TEXT_WHITE_BRIGHT + Cores.ANSI_RED_BACKGROUND + "======================================================");
+		System.out.println(Cores.TEXT_PURPLE_BRIGHT + Cores.ANSI_BLACK_BACKGROUND + "======================================================");
 		System.out.println("                                                     ");
 		System.out.println("               LOJINHA MISTERIOSA                     ");
 		System.out.println("                                                     ");
@@ -30,7 +32,7 @@ public static void main(String[] args) {
 		System.out.println("            2 - Lista de produtos                     ");
 		System.out.println("            3 - Exibir carrinho:                      ");
 		System.out.println("            4 - Finalizar a compra:                   ");
-		System.out.println("            6 - Sair                                 ");
+		System.out.println("            5 - Sair                                 ");
 		System.out.println("                                                     ");
 		System.out.println("======================================================");
 		System.out.println("            Entre com a opção desejada:              ");
@@ -38,7 +40,7 @@ public static void main(String[] args) {
 
 		opcao = leia.nextInt();
 
-		if (opcao == 6) {
+		if (opcao == 5) {
 			System.out.println("\nLojinha Misteriosa agradece o contato. Volte sempre!");
 			leia.close();
 			System.exit(0);
@@ -61,17 +63,22 @@ public static void main(String[] args) {
 				
 			case 2:
 				System.out.println("Lista de produtos: \n\n");
-				
+				System.out.println("1. Caixa Misteriosa - Pacote 1: Contém 5 itens misteriosos.");
+				System.out.println("2. Caixa Misteriosa - Pacote 2: Contém 8 itens misteriosos.");
+				System.out.println("3. Caixa Misteriosa - Pacote 3: Contém 12 itens misteriosos + brinde misterioso.");
+				System.out.println("4. Caixa Misteriosa - Pacote 4: Contém 13 itens misteriosos + 2 brindes misteriosos.");
+				System.out.println("5. Caixa Misteriosa - Pacote 5: Contém 16 itens misteriosos + 2 brindes misteriosos.");
+				String listar = leia.next();
 				
 				break;
 			case 3:
 				System.out.println("Abrir carrinho\n\n");
-				
+				String abrirCarrinho = leia.next();
 
 				break;
 			case 4:
 				System.out.println("Pagamento\n\n");
-				
+				String pagar = leia.next();
 
 				break;
 			case 5:
